@@ -32,7 +32,7 @@ function Get-SkippedItems {
   Get-MigrationUserStatistics -IncludeSkippedItems | 
   select -Expand SkippedItems @{label="UserIdentity";expression={$_.Identity}} | 
   ? {$_.Kind -ne "CorruptFolderACL" } | 
-  select @{label="Identity";expression={$_.UserIdentity}},Kind,FolderName,Subject,DateReceived,MessageSize,@{label="MessageSizeMB";expression={$_.MessageSize/1024/1024}}
+  select @{label="Identity";expression={$_.UserIdentity}},Kind,FolderName,Subject,DateReceived,@{label="MessageSizeMB";expression={$_.MessageSize/1024/1024}}
 }
 
 
