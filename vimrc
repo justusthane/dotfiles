@@ -77,6 +77,7 @@ set background=dark
 let g:Tex_CompileRule_pdf='xelatex --interaction=nonstopmode $*'
 inoremap jj <Esc>
 nnoremap zz <Esc>:w<Cr>
+nnoremap zz :w<Cr>
 let g:user_emmet_leader_key='<C-Y>'
 
 "let g:netrw_liststyle = 3 " netrw use tree view by default
@@ -105,6 +106,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
+set display=lastline " Show as much as possible of wrapped lines
 set cursorline
 set ttyfast
 set ruler
