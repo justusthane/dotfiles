@@ -27,7 +27,7 @@ function Get-SkippedItems {
     $BatchID
   )
   Check-LoadedModule "ExchangeOnlineManagement"
-  get-migrationuser -BatchId staff_week-7_2021-06-28 | 
+  get-migrationuser -BatchId $BatchID | 
   ?{ $_.HasUnapprovedSkippedItems -eq $True } | 
   Get-MigrationUserStatistics -IncludeSkippedItems | 
   select -Expand SkippedItems @{label="UserIdentity";expression={$_.Identity}} | 
