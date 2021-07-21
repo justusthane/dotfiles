@@ -7,6 +7,7 @@ filetype off                  " required
 if !has("gui_running")
   set term=xterm
   set t_Co=256
+  set termencoding=utf8
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
   inoremap <silent> <Char-206> 
@@ -41,11 +42,13 @@ Plugin 'michalliu/jsoncodecs.vim'
 Plugin 'michalliu/sourcebeautify.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-vinegar'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'niftylettuce/vim-jinja'
 Plugin 'othree/xml.vim'
 Plugin 'PProvost/vim-ps1'
+Plugin 'neoclide/coc.nvim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -69,6 +72,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" coc.nvim extensions
+let g:coc_global_extensions=[ 'coc-powershell' ]
 
 "Mouse support
 :set mouse=a
@@ -174,4 +180,6 @@ nnoremap ; :
 
 au BufNewFile,BufRead *.njk set ft=jinja
 
+:source ~/dotfiles/vimrc_coc.nvim
 set dir=~
+

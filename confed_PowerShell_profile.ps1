@@ -1,5 +1,7 @@
 remove-item alias:curl
 
+. ~\PowerShellScripts\Load-Scripts.ps1
+
   
 function Check-LoadedModule {
   Param( [parameter(Mandatory = $true)][alias("Module")][string]$ModuleName)
