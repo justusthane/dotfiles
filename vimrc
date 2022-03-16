@@ -42,11 +42,11 @@ Plugin 'michalliu/jsoncodecs.vim'
 Plugin 'michalliu/sourcebeautify.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-obsession'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'niftylettuce/vim-jinja'
-Plugin 'othree/xml.vim'
 Plugin 'PProvost/vim-ps1'
 Plugin 'neoclide/coc.nvim'
 
@@ -119,6 +119,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
+set splitright
 let mapleader = ","
 
 set backupdir=.backup/,~/.vim/backup//,~/vimfiles/backup//,./
@@ -179,7 +180,8 @@ nnoremap ; :
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 au BufNewFile,BufRead *.njk set ft=jinja
+au BufNewFile,BufRead *.xml set formatexpr=xmlformat#Format()
 
 :source ~/dotfiles/vimrc_coc.nvim
 set dir=~
-
+:cd ~
