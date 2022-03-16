@@ -1,7 +1,3 @@
-" Vundle stuff
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " Fix for ConEmu color. Try changing to if !empty($CONEMUBUILD) if it messes
 " up on mac
 if !has("gui_running")
@@ -19,62 +15,78 @@ packadd! matchit
 
 " set the runtime path to include Vundle and initialize
 if has("win32")
-  set rtp+=~/vimfiles/bundle/Vundle.vim
-  "call vundle#begin()
-  " alternatively, pass a path where Vundle should install plugins
-  call vundle#begin('~/vimfiles/bundle')
+  
 else
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-  " alternatively, pass a path where Vundle should install plugins
+  
 endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mattn/emmet-vim'
-Plugin 'michalliu/jsruntime.vim'
-Plugin 'michalliu/jsoncodecs.vim'
-Plugin 'michalliu/sourcebeautify.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-obsession'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'KabbAmine/vCoolor.vim'
-Plugin 'niftylettuce/vim-jinja'
-Plugin 'PProvost/vim-ps1'
-Plugin 'neoclide/coc.nvim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'michalliu/jsruntime.vim'
+" Plugin 'michalliu/jsoncodecs.vim'
+" Plugin 'michalliu/sourcebeautify.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'tpope/vim-vinegar'
+" Plugin 'tpope/vim-obsession'
+" Plugin 'junegunn/fzf'
+" Plugin 'junegunn/fzf.vim'
+" Plugin 'KabbAmine/vCoolor.vim'
+" Plugin 'niftylettuce/vim-jinja'
+" Plugin 'PProvost/vim-ps1'
+" Plugin 'neoclide/coc.nvim'
+" 
+" " The following are examples of different formats supported.
+" " Keep Plugin commands between vundle#begin/end.
+" " plugin on GitHub repo
+" "Plugin 'tpope/vim-fugitive'
+" " plugin from http://vim-scripts.org/vim/scripts.html
+" " Plugin 'L9'
+" " Git plugin not hosted on GitHub
+" 
+" " All of your Plugins must be added before the following line
+" call vundle#end()            " required
+" filetype plugin indent on    " required
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " Put your non-Plugin stuff after this line
+" =======
+call plug#begin()
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/emmet-vim'
+Plug 'michalliu/jsruntime.vim'
+Plug 'michalliu/jsoncodecs.vim'
+Plug 'michalliu/sourcebeautify.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'KabbAmine/vCoolor.vim'
+Plug 'niftylettuce/vim-jinja'
+Plug 'othree/xml.vim'
+Plug 'PProvost/vim-ps1'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+call plug#end()
 
 " coc.nvim extensions
-let g:coc_global_extensions=[ 'coc-powershell' ]
+let g:coc_global_extensions=[ 'coc-powershell','coc-pyright' ]
 
 "Mouse support
 :set mouse=a
