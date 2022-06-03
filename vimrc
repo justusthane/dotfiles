@@ -19,6 +19,51 @@ if has("win32")
 else
   
 endif
+
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'michalliu/jsruntime.vim'
+" Plugin 'michalliu/jsoncodecs.vim'
+" Plugin 'michalliu/sourcebeautify.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'tpope/vim-vinegar'
+" Plugin 'tpope/vim-obsession'
+" Plugin 'junegunn/fzf'
+" Plugin 'junegunn/fzf.vim'
+" Plugin 'KabbAmine/vCoolor.vim'
+" Plugin 'niftylettuce/vim-jinja'
+" Plugin 'PProvost/vim-ps1'
+" Plugin 'neoclide/coc.nvim'
+" 
+" " The following are examples of different formats supported.
+" " Keep Plugin commands between vundle#begin/end.
+" " plugin on GitHub repo
+" "Plugin 'tpope/vim-fugitive'
+" " plugin from http://vim-scripts.org/vim/scripts.html
+" " Plugin 'L9'
+" " Git plugin not hosted on GitHub
+" 
+" " All of your Plugins must be added before the following line
+" call vundle#end()            " required
+" filetype plugin indent on    " required
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " Put your non-Plugin stuff after this line
+" =======
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
@@ -86,6 +131,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
+set splitright
 let mapleader = ","
 
 set backupdir=.backup/,~/.vim/backup//,~/vimfiles/backup//,./
@@ -149,7 +195,8 @@ inoremap <buffer> <leader>e <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 au BufNewFile,BufRead *.njk set ft=jinja
+au BufNewFile,BufRead *.xml set formatexpr=xmlformat#Format()
 
 :source ~/dotfiles/vimrc_coc.nvim
 set dir=~
-
+:cd ~

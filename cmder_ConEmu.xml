@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2021-07-26 13:11:22" build="210304">
+		<key name=".Vanilla" modified="2022-03-14 09:19:35" build="210912">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -73,7 +73,7 @@
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{PowerShell::PowerShell}"/>
+			<value name="StartTasksName" type="string" data=""/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="00"/>
@@ -97,11 +97,11 @@
 			<value name="Multi.Iterate" type="hex" data="01"/>
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
-			<value name="KeyboardHooks" type="hex" data="02"/>
+			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="FontName" type="string" data="Consolas"/>
 			<value name="FontName2" type="string" data="Lucida Console"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
-			<value name="FontSize" type="ulong" data="16"/>
+			<value name="FontSize" type="ulong" data="20"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
 			<value name="FontSizeX2" type="ulong" data="0"/>
 			<value name="FontSizeX3" type="ulong" data="0"/>
@@ -124,11 +124,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd Width" type="dword" data="0000006f"/>
-			<value name="ConWnd Height" type="dword" data="00000016"/>
+			<value name="ConWnd Width" type="dword" data="00000071"/>
+			<value name="ConWnd Height" type="dword" data="00000023"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="2242"/>
-			<value name="ConWnd Y" type="long" data="-23"/>
+			<value name="ConWnd X" type="long" data="2291"/>
+			<value name="ConWnd Y" type="long" data="-13"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -193,7 +193,7 @@
 			<value name="FARuseASCIIsort" type="hex" data="00"/>
 			<value name="ShellNoZoneCheck" type="hex" data="00"/>
 			<value name="FixAltOnAltTab" type="hex" data="00"/>
-			<value name="DisableMouse" type="hex" data="01"/>
+			<value name="DisableMouse" type="hex" data="00"/>
 			<value name="RSelectionFix" type="hex" data="01"/>
 			<value name="MouseSkipActivation" type="hex" data="01"/>
 			<value name="MouseSkipMoving" type="hex" data="01"/>
@@ -263,13 +263,13 @@
 			<value name="TabFontHeight" type="long" data="16"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
-			<value name="TabConsole" type="string" data="     %n     "/>
+			<value name="TabConsole" type="string" data="%"/>
 			<value name="TabSkipWords" type="string" data="Administrator:|Администратор:"/>
 			<value name="TabPanels" type="string" data="&lt;%c&gt; %s"/>
 			<value name="TabEditor" type="string" data="&lt;%c.%i&gt;{%s}"/>
 			<value name="TabEditorModified" type="string" data="&lt;%c.%i&gt;[%s] *"/>
 			<value name="TabViewer" type="string" data="&lt;%c.%i&gt;[%s]"/>
-			<value name="TabLenMax" type="ulong" data="20"/>
+			<value name="TabLenMax" type="ulong" data="40"/>
 			<value name="AdminTitleSuffix" type="string" data=" (Admin)"/>
 			<value name="AdminShowShield" type="hex" data="01"/>
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
@@ -292,7 +292,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data=""/>
+			<value name="FindText" type="string" data="jbadergr"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -483,28 +483,28 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2021-07-26 13:11:22" build="210304">
-				<value name="Count" type="long" data="11"/>
-				<key name="Task1" modified="2021-07-26 13:14:39" build="210304">
-					<value name="Name" type="string" data="{PowerShell::PowerShell as Admin}"/>
-					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
-					<value name="Cmd1" type="string" data='* -new_console:d:C:\Users\jbadergr PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="Flags" type="dword" data="00000003"/>
-				</key>
-				<key name="Task2" modified="2021-07-26 13:13:31" build="210304">
-					<value name="Name" type="string" data="{PowerShell::PowerShell}"/>
+			<key name="Tasks" modified="2022-02-07 09:16:37" build="210912">
+				<value name="Count" type="long" data="12"/>
+				<key name="Task1" modified="2022-02-07 09:16:37" build="210912">
+					<value name="Name" type="string" data="{pwsh::PowerShell}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Cmd1" type="string" data='-new_console:d:C:\Users\jbadergr PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Flags" type="dword" data="00000007"/>
+				</key>
+				<key name="Task2" modified="2022-02-07 09:16:37" build="210912">
+					<value name="Name" type="string" data="{pwsh::PowerShell as Admin}"/>
+					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
+					<value name="Cmd1" type="string" data='* -new_console:d:C:\Users\jbadergr PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task3" modified="2021-07-26 13:15:40" build="210304">
-					<value name="Name" type="string" data="{PowerShell::Exchange}"/>
+				<key name="Task3" modified="2022-02-07 09:17:05" build="210912">
+					<value name="Name" type="string" data="{pwsh::Exchange Management Shell}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data='-new_console:d:C:\Users\jbadergr C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command ". &apos;C:\Program Files\Microsoft\Exchange Server\V15\bin\RemoteExchange.ps1&apos;; Connect-ExchangeServer -auto -ClientApplication:ManagementShell "'/>
@@ -512,7 +512,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task4" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task4" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
@@ -522,7 +522,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task5" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task5" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{cmd::Cmder}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -531,7 +531,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task6" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{bash::mintty as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -541,7 +541,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data='"%CMDER_ROOT%vendor\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
 				</key>
-				<key name="Task7" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task7" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{bash::mintty}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -550,7 +550,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='"%ConEmuDir%\..\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
 				</key>
-				<key name="Task8" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task8" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{bash::bash as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -559,7 +559,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task9" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task9" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{bash::bash}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -568,23 +568,32 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task10" modified="2021-07-26 13:11:22" build="210304">
-					<value name="Name" type="string" data="{WSL::bash}"/>
-					<value name="Flags" type="dword" data="00000000"/>
+				<key name="Task10" modified="2022-02-07 09:16:37" build="210912">
+					<value name="Name" type="string" data="{WSL}"/>
+					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='-icon "%USERPROFILE%\AppData\Local\lxss\bash.ico"'/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Active" type="long" data="0"/>
-					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -cur_console:pm:/mnt'/>
+					<value name="Cmd1" type="string" data="wsl.exe -cur_console:pm:/mnt"/>
 				</key>
-				<key name="Task11" modified="2021-07-26 13:11:22" build="210304">
+				<key name="Task11" modified="2022-02-07 09:16:37" build="210912">
 					<value name="Name" type="string" data="{Putty}"/>
 					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Hotkey" type="dword" data="10121150"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="putty.exe"/>
+				</key>
+				<key name="Task12" modified="2022-02-07 09:16:37" build="210912">
+					<value name="Name" type="string" data="{PowerShell 7}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='* -new_console:d:C:\Users\jbadergr "C:\Program Files\PowerShell\7\pwsh.exe" -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
@@ -668,8 +677,8 @@
 			<value name="Key.MaximizeHeight" type="dword" data="00000000"/>
 			<value name="DefaultTerminalAgressive" type="hex" data="01"/>
 			<value name="DefaultTerminalNewWindow" type="hex" data="00"/>
-			<value name="AnsiLog" type="hex" data="00"/>
-			<value name="AnsiLogPath" type="string" data="%ConEmuDir%\Logs\"/>
+			<value name="AnsiLog" type="hex" data="01"/>
+			<value name="AnsiLogPath" type="string" data="C:\Users\jbadergr\OneDrive - Confederation College\Documents\ConsoleLogs"/>
 			<value name="Multi.DupConfirm" type="hex" data="01"/>
 			<value name="Multi.DetachConfirm" type="hex" data="01"/>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
@@ -678,7 +687,7 @@
 			<value name="TaskbarProgress" type="hex" data="01"/>
 			<value name="RetardInactivePanes" type="hex" data="00"/>
 			<value name="ProcessCmdStart" type="hex" data="01"/>
-			<value name="Multi.ShowSearch" type="hex" data="01"/>
+			<value name="Multi.ShowSearch" type="hex" data="00"/>
 			<value name="Multi.CloseConfirmFlags" type="hex" data="04"/>
 			<value name="FontUseDpi" type="hex" data="01"/>
 			<value name="FontUseUnits" type="hex" data="00"/>
@@ -692,7 +701,7 @@
 			<value name="StatusBar.Hide.Dpi" type="hex" data="01"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
-			<key name="HotKeys" modified="2021-07-17 19:11:24" build="210304">
+			<key name="HotKeys" modified="2021-12-09 08:56:58" build="210912">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -702,9 +711,9 @@
 				<value name="CdExplorerPath" type="dword" data="00000000"/>
 				<value name="ForcedFullScreen" type="dword" data="12115b0d"/>
 				<value name="SwitchGuiFocus" type="dword" data="00000000"/>
-				<value name="SetFocusGui" type="dword" data="00000000"/>
+				<value name="SetFocusGui" type="dword" data="00005b08"/>
 				<value name="SetFocusChild" type="dword" data="00000000"/>
-				<value name="ChildSystemMenu" type="dword" data="000011ff"/>
+				<value name="ChildSystemMenu" type="dword" data="0000114d"/>
 				<value name="Multi.NewConsole" type="dword" data="00000000"/>
 				<value name="Multi.NewConsoleShift" type="dword" data="00001154"/>
 				<value name="Multi.CmdKey" type="dword" data="00000000"/>
@@ -733,7 +742,7 @@
 				<value name="Multi.Scroll" type="dword" data="00000000"/>
 				<value name="Multi.GroupInput" type="dword" data="00005d47"/>
 				<value name="Multi.Detach" type="dword" data="00000000"/>
-				<value name="Multi.Close" type="dword" data="00001157"/>
+				<value name="Multi.Close" type="dword" data="00000000"/>
 				<value name="CloseTabKey" type="dword" data="00000000"/>
 				<value name="CloseGroupKey" type="dword" data="00000000"/>
 				<value name="CloseGroupPrcKey" type="dword" data="00000000"/>
@@ -758,7 +767,7 @@
 				<value name="HighlightMouseSwitchX" type="dword" data="00005d58"/>
 				<value name="Multi.ShowTabsList" type="dword" data="00000000"/>
 				<value name="Multi.ShowTabsList2" type="dword" data="00000000"/>
-				<value name="ClipboardVkAllLines" type="dword" data="0000102d"/>
+				<value name="ClipboardVkAllLines" type="dword" data="00101156"/>
 				<value name="ClipboardVkFirstLine" type="dword" data="00001156"/>
 				<value name="DeleteWordToLeft" type="dword" data="00001108"/>
 				<value name="FindTextKey" type="dword" data="00005d46"/>
@@ -890,6 +899,7 @@
 				<value name="CloseToRightKey" type="dword" data="00000000"/>
 				<value name="Key.EditMenu" type="dword" data="00000000"/>
 				<value name="Key.EditMenu2" type="dword" data="00000000"/>
+				<value name="SetFocusParent" type="dword" data="0000a01b"/>
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
