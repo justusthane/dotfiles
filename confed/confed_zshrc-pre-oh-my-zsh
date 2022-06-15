@@ -42,4 +42,7 @@ export FZF_ALT_C_COMMAND="fd . /mnt/c/Users/jbadergr /home/justus"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+plugins=(virtualenv)
+
 path=('/home/justus/.local/bin' $path)
+export VIRTUAL_ENV_DISABLE_PROMPT=0
