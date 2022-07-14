@@ -211,6 +211,9 @@ nnoremap k gk
 nnoremap ; :
 "end of http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 
+noremap <buffer> <leader>e :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+inoremap <buffer> <leader>e <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
 "Quickly open .vimrc
 :nnoremap <leader>ev :edit $MYVIMRC<cr> 
 "Quickly source .vimrc 
