@@ -83,6 +83,7 @@ Plug 'niftylettuce/vim-jinja'
 Plug 'othree/xml.vim'
 Plug 'PProvost/vim-ps1'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'svermeulen/vim-macrobatics'
 call plug#end()
 
 " coc.nvim extensions
@@ -160,11 +161,35 @@ vnoremap <tab> %
 
 "fzf keybindings
 nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :call fzf#run({'source': 'fd --type file . ~', 'sink': 'e'})<CR>
+nmap <Leader>F :call fzf#run({'source': 'fd --type file . C:\Users\jbadergr', 'sink': 'e'})<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
 nmap <Leader>ex :Explore<Cr>
+
+
+" https://github.com/svermeulen/vim-macrobatics
+" Use <nowait> to override the default bindings which wait for another key press
+nmap gqp <plug>(Mac_Play)
+nmap gq <plug>(Mac_RecordNew)
+
+nmap <leader>mh :DisplayMacroHistory<cr>
+
+nmap [m <plug>(Mac_RotateBack)
+nmap ]m <plug>(Mac_RotateForward)
+
+nmap <leader>ma <plug>(Mac_Append)
+nmap <leader>mp <plug>(Mac_Prepend)
+
+nmap <leader>mng <plug>(Mac_NameCurrentMacro)
+nmap <leader>mnf <plug>(Mac_NameCurrentMacroForFileType)
+nmap <leader>mns <plug>(Mac_NameCurrentMacroForCurrentSession)
+
+nmap <leader>mo <plug>(Mac_SearchForNamedMacroAndOverwrite)
+nmap <leader>mr <plug>(Mac_SearchForNamedMacroAndRename)
+nmap <leader>md <plug>(Mac_SearchForNamedMacroAndDelete)
+nmap <leader>me <plug>(Mac_SearchForNamedMacroAndPlay)
+nmap <leader>ms <plug>(Mac_SearchForNamedMacroAndSelect)
 
 "set wrap
 "set textwidth=79
