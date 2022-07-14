@@ -1,0 +1,2 @@
+options.csv_lineterminator = '\n'
+options.clean_names = True
