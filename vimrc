@@ -133,6 +133,7 @@ set laststatus=2
 set undofile
 set splitright
 let mapleader = ","
+set autochdir
 
 set backupdir=.backup/,~/.vim/backup//,~/vimfiles/backup//,./
 set directory=.swp/,~/.vim/swp//,~/vimfiles/swp//,./
