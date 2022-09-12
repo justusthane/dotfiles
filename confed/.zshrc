@@ -112,3 +112,6 @@ export LESS='--mouse'
 plugins=(virtualenv)
 
 path=('/home/justus/.local/bin' $path)
+path=('/usr/local/go/bin' $path)
+
+source /home/justus/.config/broot/launcher/bash/br
