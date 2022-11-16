@@ -102,9 +102,16 @@ source $ZSH/oh-my-zsh.sh
 #source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 #source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_ALT_C_COMMAND="fd . /mnt/c/Users/jbadergr /home/justus"
+export FZF_CTRL_T_COMMAND="fd . /mnt/c/Users/jbadergr /home/justus"
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Enable mouse support in less/man
+export LESS='--mouse'
 
 plugins=(virtualenv)
 
 path=('/home/justus/.local/bin' $path)
+path=('/usr/local/go/bin' $path)
+
+source /home/justus/.config/broot/launcher/bash/br
