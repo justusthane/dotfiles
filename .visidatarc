@@ -1,2 +1,3 @@
 options.csv_lineterminator = '\n'
 options.clean_names = True
+options.disp_date_fmt = '%Y-%m-%d %H:%M:%S'
