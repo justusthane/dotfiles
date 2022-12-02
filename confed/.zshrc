@@ -112,6 +112,20 @@ export LESS='--mouse'
 plugins=(virtualenv)
 
 path=('/home/justus/.local/bin' $path)
+path=('/home/jbadergr/.local/bin' $path)
 path=('/usr/local/go/bin' $path)
 
 source /home/justus/.config/broot/launcher/bash/br
+
+autoload -U bashcompinit
+bashcompinit
+
+eval $(register-python-argcomplete ansible)
+eval $(register-python-argcomplete ansible-config)
+eval $(register-python-argcomplete ansible-console)
+eval $(register-python-argcomplete ansible-doc)
+eval $(register-python-argcomplete ansible-galaxy)
+eval $(register-python-argcomplete ansible-inventory)
+eval $(register-python-argcomplete ansible-playbook)
+eval $(register-python-argcomplete ansible-pull)
+eval $(register-python-argcomplete ansible-vault)
