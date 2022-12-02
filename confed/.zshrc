@@ -115,3 +115,8 @@ path=('/home/justus/.local/bin' $path)
 path=('/usr/local/go/bin' $path)
 
 source /home/justus/.config/broot/launcher/bash/br
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOST-sh
