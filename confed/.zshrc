@@ -129,3 +129,8 @@ eval $(register-python-argcomplete ansible-inventory)
 eval $(register-python-argcomplete ansible-playbook)
 eval $(register-python-argcomplete ansible-pull)
 eval $(register-python-argcomplete ansible-vault)
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOST-sh
