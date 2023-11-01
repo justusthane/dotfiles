@@ -7,6 +7,8 @@ Host cc-www-sql
 Host 184.67.182.22
 	KexAlgorithms +diffie-hellman-group1-sha1
   Ciphers +aes256-cbc
+Host 10.1.99.1
+  KexAlgorithms +diffie-hellman-group14-sha1
 Host *
   KexAlgorithms +diffie-hellman-group1-sha1
   HostKeyAlgorithms=+ssh-rsa

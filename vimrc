@@ -82,7 +82,7 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'niftylettuce/vim-jinja'
 Plug 'othree/xml.vim'
 Plug 'PProvost/vim-ps1'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'svermeulen/vim-macrobatics'
 call plug#end()
 
@@ -223,6 +223,6 @@ inoremap <buffer> <leader>e <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 au BufNewFile,BufRead *.njk set ft=jinja
 au BufNewFile,BufRead *.xml set formatexpr=xmlformat#Format()
 
-:source ~/dotfiles/vimrc_coc.nvim
+":source ~/dotfiles/vimrc_coc.nvim
 set dir=~
 :cd ~
