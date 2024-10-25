@@ -20,50 +20,6 @@ else
   
 endif
 
-" " let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-" Plugin 'morhetz/gruvbox'
-" Plugin 'tpope/vim-surround'
-" Plugin 'tpope/vim-repeat'
-" Plugin 'tpope/vim-markdown'
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'mattn/emmet-vim'
-" Plugin 'michalliu/jsruntime.vim'
-" Plugin 'michalliu/jsoncodecs.vim'
-" Plugin 'michalliu/sourcebeautify.vim'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'tpope/vim-vinegar'
-" Plugin 'tpope/vim-obsession'
-" Plugin 'junegunn/fzf'
-" Plugin 'junegunn/fzf.vim'
-" Plugin 'KabbAmine/vCoolor.vim'
-" Plugin 'niftylettuce/vim-jinja'
-" Plugin 'PProvost/vim-ps1'
-" Plugin 'neoclide/coc.nvim'
-" 
-" " The following are examples of different formats supported.
-" " Keep Plugin commands between vundle#begin/end.
-" " plugin on GitHub repo
-" "Plugin 'tpope/vim-fugitive'
-" " plugin from http://vim-scripts.org/vim/scripts.html
-" " Plugin 'L9'
-" " Git plugin not hosted on GitHub
-" 
-" " All of your Plugins must be added before the following line
-" call vundle#end()            " required
-" filetype plugin indent on    " required
-" " To ignore plugin indent changes, instead use:
-" "filetype plugin on
-" "
-" " Brief help
-" " :PluginList       - lists configured plugins
-" " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
-" =======
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
@@ -79,11 +35,12 @@ Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'KabbAmine/vCoolor.vim'
-Plug 'niftylettuce/vim-jinja'
+"Plug 'niftylettuce/vim-jinja'
 Plug 'othree/xml.vim'
 Plug 'PProvost/vim-ps1'
 "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'svermeulen/vim-macrobatics'
+"Plug 'SirVer/ultisnips'
 call plug#end()
 
 " coc.nvim extensions
@@ -226,3 +183,13 @@ au BufNewFile,BufRead *.xml set formatexpr=xmlformat#Format()
 ":source ~/dotfiles/vimrc_coc.nvim
 set dir=~
 :cd ~
+
+" Needed for tab to function with coc.vim
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
