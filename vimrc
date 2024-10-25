@@ -67,11 +67,11 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 
 
-set modelines=0
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+"set modelines=0
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
 
 set encoding=utf-8
 set scrolloff=3
@@ -193,3 +193,11 @@ function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif

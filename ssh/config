@@ -9,6 +9,14 @@ Host 184.67.182.22
   Ciphers +aes256-cbc
 Host 10.1.99.1
   KexAlgorithms +diffie-hellman-group14-sha1
+Host 10.1.99.26
+  KexAlgorithms +diffie-hellman-group14-sha1
+Host 10.1.99.35
+  KexAlgorithms +diffie-hellman-group14-sha1
+Host 10.5.22.3
+  KexAlgorithms +diffie-hellman-group14-sha1
+Host 10.1.99.247
+  KexAlgorithms +diffie-hellman-group14-sha1
 Host *
   KexAlgorithms +diffie-hellman-group1-sha1
   HostKeyAlgorithms=+ssh-rsa

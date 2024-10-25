@@ -113,11 +113,11 @@ export EDITOR="$VISUAL"
 export LESS='--mouse'
 
 
-path=('/home/justus/.local/bin' $path)
-path=('/home/jbadergr/.local/bin' $path)
-path=('/usr/local/go/bin' $path)
-path=('/snap/bin' $path)
-path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
+#path=('/home/justus/.local/bin' $path)
+#path=('/home/jbadergr/.local/bin' $path)
+#path=('/usr/local/go/bin' $path)
+#path=('/snap/bin' $path)
+#path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
 
 source /home/justus/.config/broot/launcher/bash/br
 
