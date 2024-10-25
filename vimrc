@@ -1,14 +1,14 @@
-" Fix for ConEmu color. Try changing to if !empty($CONEMUBUILD) if it messes
-" up on mac
-if !has("gui_running")
-  set term=xterm
-  set t_Co=256
-  set termencoding=utf8
-  let &t_AB="\e[48;5;%dm"
-  let &t_AF="\e[38;5;%dm"
-  inoremap <silent> <Char-206> 
-  cnoremap <silent> <Char-206> 
-endif
+"" Fix for ConEmu color. Try changing to if !empty($CONEMUBUILD) if it messes
+"" up on mac
+"if !has("gui_running")
+"  set term=xterm
+"  set t_Co=256
+"  set termencoding=utf8
+"  let &t_AB="\e[48;5;%dm"
+"  let &t_AF="\e[38;5;%dm"
+"  inoremap <silent> <Char-206> 
+"  cnoremap <silent> <Char-206> 
+"endif
 set rtp+=/usr/local/opt/fzf
 
 packadd! matchit
