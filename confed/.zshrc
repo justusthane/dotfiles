@@ -70,9 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf z)
+plugins=(git fzf z vi-mode virtualenv)
 
 source $ZSH/oh-my-zsh.sh
+export VIRTUAL_ENV_DISABLE_PROMPT=
 
 # User configuration
 
@@ -99,21 +100,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
-#source /usr/share/doc/fzf/examples/key-bindings.zsh
-export FZF_ALT_C_COMMAND="fd . /mnt/c/Users/jbadergr /home/justus"
-export FZF_CTRL_T_COMMAND="fd . /mnt/c/Users/jbadergr /home/justus"
+source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+export FZF_ALT_C_COMMAND="fd . /mnt/c/Users/jbadergr /mnt/d/Users/jbadergr /home/justus"
+export FZF_CTRL_T_COMMAND="fd . /mnt/c/Users/jbadergr /mnt/d/Users/jbadergr /home/justus"
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+#INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
 # Enable mouse support in less/man
 export LESS='--mouse'
 
-plugins=(virtualenv)
 
 path=('/home/justus/.local/bin' $path)
 path=('/home/jbadergr/.local/bin' $path)
 path=('/usr/local/go/bin' $path)
+path=('/snap/bin' $path)
+path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
 
 source /home/justus/.config/broot/launcher/bash/br
 
@@ -134,3 +138,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOST-sh
+
+bindkey -v
