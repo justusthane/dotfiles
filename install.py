@@ -11,10 +11,11 @@ args=parser.parse_args()
 home_dir = os.path.expanduser("~")
 if(system() == "Windows"):
     nvim_config_dir = f"{home_dir}/AppData/Local/nvim"
-elif(system() == "Linux"):
+elif(system() == "Linux") or (system() == "Darwin"):
     nvim_config_dir = f"{home_dir}/.config/nvim"
 else:
     raise Exception("Unknown platform")
+if not os.path.exists(nvim_config_dir): os.makedirs(nvim_config_dir)
 
 def create_symlink(link, target):
     print(f"Symlinking {link} -> {target}...")
@@ -32,3 +33,5 @@ def create_symlink(link, target):
 create_symlink(link = f"{nvim_config_dir}/init.vim", 
                target = f"{home_dir}/dotfiles/init.vim")
 
+create_symlink(link = f"{home_dir}/.vimrc", 
+               target = f"{home_dir}/dotfiles/vimrc")
