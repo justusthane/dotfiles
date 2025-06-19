@@ -18,7 +18,7 @@ Host 10.5.22.3
 Host 10.1.99.247
   KexAlgorithms +diffie-hellman-group14-sha1
 Host *
-  KexAlgorithms +diffie-hellman-group1-sha1
-  HostKeyAlgorithms=+ssh-rsa
-  PubkeyAcceptedAlgorithms=+ssh-rsa
-  Ciphers +aes256-cbc
+	KexAlgorithms +diffie-hellman-group1-sha1
+	HostKeyAlgorithms=+ssh-rsa
+	PubkeyAcceptedAlgorithms=+ssh-rsa
+	Ciphers +aes256-cbc
