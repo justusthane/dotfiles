@@ -20,35 +20,35 @@ else
   
 endif
 
-call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-fugitive'
-Plug 'mattn/emmet-vim'
-Plug 'michalliu/jsruntime.vim'
-Plug 'michalliu/jsoncodecs.vim'
-Plug 'michalliu/sourcebeautify.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-vinegar'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'KabbAmine/vCoolor.vim'
-"Plug 'niftylettuce/vim-jinja'
-Plug 'othree/xml.vim'
-Plug 'PProvost/vim-ps1'
-"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'svermeulen/vim-macrobatics'
-"Plug 'SirVer/ultisnips'
-call plug#end()
-
-" coc.nvim extensions
-let g:coc_global_extensions=[ 'coc-powershell','coc-pyright' ]
+"call plug#begin()
+"Plug 'morhetz/gruvbox'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-markdown'
+"Plug 'tpope/vim-fugitive'
+"Plug 'mattn/emmet-vim'
+"Plug 'michalliu/jsruntime.vim'
+"Plug 'michalliu/jsoncodecs.vim'
+"Plug 'michalliu/sourcebeautify.vim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'tpope/vim-vinegar'
+"Plug 'junegunn/fzf'
+"Plug 'junegunn/fzf.vim'
+"Plug 'KabbAmine/vCoolor.vim'
+""Plug 'niftylettuce/vim-jinja'
+"Plug 'othree/xml.vim'
+"Plug 'PProvost/vim-ps1'
+""Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+"Plug 'svermeulen/vim-macrobatics'
+""Plug 'SirVer/ultisnips'
+"call plug#end()
+"
+"" coc.nvim extensions
+"let g:coc_global_extensions=[ 'coc-powershell','coc-pyright' ]
 
 "Mouse support
 :set mouse=a
-colorscheme gruvbox
+"colorscheme gruvbox
 set background=dark
 let g:Tex_CompileRule_pdf='xelatex --interaction=nonstopmode $*'
 inoremap jj <Esc>
