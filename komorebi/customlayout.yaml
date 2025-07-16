@@ -1,0 +1,4 @@
+- column: Primary
+  #configuration: !WidthPercentage 70 # percentage of screen
+- column: Tertiary
+  configuration: Horizontal
