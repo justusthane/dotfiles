@@ -54,6 +54,8 @@ let g:Tex_CompileRule_pdf='xelatex --interaction=nonstopmode $*'
 inoremap jj <Esc>
 nnoremap zz <Esc>:w<Cr>
 nnoremap zz :w<Cr>
+" Select last paste
+nnoremap gp `[v`]
 let g:user_emmet_leader_key='<C-Y>'
 
 "let g:netrw_liststyle = 3 " netrw use tree view by default
@@ -109,7 +111,6 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase
 set smartcase
-set gdefault
 set incsearch
 set showmatch
 set hlsearch

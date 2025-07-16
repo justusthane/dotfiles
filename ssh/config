@@ -20,5 +20,8 @@ Host 10.1.99.247
 Host *
   KexAlgorithms +diffie-hellman-group1-sha1
   HostKeyAlgorithms=+ssh-rsa
-  PubkeyAcceptedAlgorithms=+ssh-rsa
+  "PubkeyAcceptedAlgorithms=+ssh-rsa
   Ciphers +aes256-cbc
+Host cc-gitlab.confederationcollege.ca
+  HostName cc-gitlab.confederationcollege.ca
+  IdentityFile C:\Users\jbadergr\.ssh\id_rsa_gitlab 
