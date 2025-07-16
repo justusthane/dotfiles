@@ -1,14 +1,14 @@
-" Fix for ConEmu color. Try changing to if !empty($CONEMUBUILD) if it messes
-" up on mac
-if !has("gui_running")
-  set term=xterm
-  set t_Co=256
-  set termencoding=utf8
-  let &t_AB="\e[48;5;%dm"
-  let &t_AF="\e[38;5;%dm"
-  inoremap <silent> <Char-206> 
-  cnoremap <silent> <Char-206> 
-endif
+"" Fix for ConEmu color. Try changing to if !empty($CONEMUBUILD) if it messes
+"" up on mac
+"if !has("gui_running")
+"  set term=xterm
+"  set t_Co=256
+"  set termencoding=utf8
+"  let &t_AB="\e[48;5;%dm"
+"  let &t_AF="\e[38;5;%dm"
+"  inoremap <silent> <Char-206> 
+"  cnoremap <silent> <Char-206> 
+"endif
 set rtp+=/usr/local/opt/fzf
 
 packadd! matchit
@@ -69,11 +69,11 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 
 
-set modelines=0
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+"set modelines=0
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
 
 set encoding=utf-8
 set scrolloff=3
@@ -194,3 +194,12 @@ function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+set whichwrap=b,s,<,>

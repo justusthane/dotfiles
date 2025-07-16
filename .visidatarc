@@ -4,3 +4,7 @@ options.disp_date_fmt = '%Y-%m-%d %H:%M:%S'
 options.clipboard_copy_cmd = 'clip.exe'
 
 import plugins.M365QReview
+#import plugins.test
+#import plugins.vtask
+import plugins.vfake
+import plugins.geocoding

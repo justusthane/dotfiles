@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf z vi-mode virtualenv)
+plugins=(git fzf vi-mode virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 export VIRTUAL_ENV_DISABLE_PROMPT=
@@ -100,7 +100,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+#source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_ALT_C_COMMAND="fd . /mnt/c/Users/jbadergr /mnt/d/Users/jbadergr /home/justus"
 export FZF_CTRL_T_COMMAND="fd . /mnt/c/Users/jbadergr /mnt/d/Users/jbadergr /home/justus"
@@ -113,11 +113,11 @@ export EDITOR="$VISUAL"
 export LESS='--mouse'
 
 
-path=('/home/justus/.local/bin' $path)
-path=('/home/jbadergr/.local/bin' $path)
-path=('/usr/local/go/bin' $path)
-path=('/snap/bin' $path)
-path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
+#path=('/home/justus/.local/bin' $path)
+#path=('/home/jbadergr/.local/bin' $path)
+#path=('/usr/local/go/bin' $path)
+#path=('/snap/bin' $path)
+#path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
 
 source /home/justus/.config/broot/launcher/bash/br
 
@@ -140,3 +140,26 @@ export XDG_CONFIG_HOME="$HOME/.config"
 source $HOME/.keychain/$HOST-sh
 
 bindkey -v
+
+PATH="/home/jbadergr/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jbadergr/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jbadergr/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jbadergr/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jbadergr/perl5"; export PERL_MM_OPT;
+
+# fnm
+FNM_PATH="/home/jbadergr/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/jbadergr/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm
+FNM_PATH="/home/jbadergr/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/jbadergr/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+. "$HOME/.local/bin/env"
+eval "$(zoxide init zsh)"
