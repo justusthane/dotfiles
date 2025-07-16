@@ -1,4 +1,5 @@
 return {
+{
   'TobinPalmer/pastify.nvim',
   cmd = { 'Pastify', 'PastifyAfter' },
   config = function()
@@ -16,4 +17,5 @@ return {
   config = function()
     vim.cmd([[colorscheme gruvbox]])
   end,
+}
 }
