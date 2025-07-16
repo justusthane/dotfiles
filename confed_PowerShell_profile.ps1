@@ -15,3 +15,5 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory
 Set-PSReadLineKeyHandler -Chord Alt+c -ScriptBlock {
   Get-ChildItem C:\Users\jbadergr -Recurse -Attributes Directory | Invoke-Fzf | Set-Location
 }
+# Words from https://gist.github.com/justusthane/4c122f504cd095bdb5d05a1d693758f7
+function croc-send { param ( $path ) & croc send --code $($(Get-Content C:\Users\jbadergr\Library\basicwordlist.txt | get-random -count 2) -join "-") $path }
