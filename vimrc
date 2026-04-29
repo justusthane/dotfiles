@@ -203,3 +203,10 @@ if executable(s:clip)
     augroup END
 endif
 set whichwrap=b,s,<,>
+
+" Copies current buffer path to clipbaord
+noremap <leader>gy :let @+ = expand("%:p")<CR>
+noremap <leader>ey :let @+ = execute('messages')<CR>
+
+noremap <leader>tl :ToggleTermSendCurrentLine<CR>
+noremap <leader>ts :ToggleTermSendVisualSelection<CR>
