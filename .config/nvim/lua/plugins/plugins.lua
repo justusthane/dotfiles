@@ -1,3 +1,8 @@
+if vim.loop.os_uname().sysname == "Windows_NT" then
+	pwsh_path = 'C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.1.0_x64__8wekyb3d8bbwe/pwsh.exe'
+else
+	pwsh_path = 'pwsh'
+end
 return {
 	{
 		'TobinPalmer/pastify.nvim',
@@ -35,7 +40,7 @@ return {
 		---@type powershell.user_config
 		opts = {
 			bundle_path = vim.fn.stdpath "data" .. "/mason/packages/powershell-editor-services",
-			shell = 'C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.1.0_x64__8wekyb3d8bbwe/pwsh.exe'
+			shell = pwsh_path
 		}
 	},
  {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}}
