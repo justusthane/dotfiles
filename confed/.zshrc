@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/dotfiles/confed/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -113,26 +113,15 @@ export EDITOR="$VISUAL"
 export LESS='--mouse'
 
 
-#path=('/home/justus/.local/bin' $path)
+path=('/home/justus/.local/bin' $path)
 #path=('/home/jbadergr/.local/bin' $path)
 #path=('/usr/local/go/bin' $path)
 #path=('/snap/bin' $path)
 #path=('/home/jbadergr/.local/lib/python3.10/site-packages' $path)
 
-source /home/justus/.config/broot/launcher/bash/br
-
 autoload -U bashcompinit
 bashcompinit
 
-eval $(register-python-argcomplete ansible)
-eval $(register-python-argcomplete ansible-config)
-eval $(register-python-argcomplete ansible-console)
-eval $(register-python-argcomplete ansible-doc)
-eval $(register-python-argcomplete ansible-galaxy)
-eval $(register-python-argcomplete ansible-inventory)
-eval $(register-python-argcomplete ansible-playbook)
-eval $(register-python-argcomplete ansible-pull)
-eval $(register-python-argcomplete ansible-vault)
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
