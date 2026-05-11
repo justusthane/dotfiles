@@ -35,3 +35,6 @@ def create_symlink(link, target):
 
 create_symlink(link = f"{nvim_config_dir}",
                target = f"{home_dir}/dotfiles/.config/nvim")
+
+create_symlink(link = f"{home_dir}/.zshrc",
+               target = f"{home_dir}/dotfiles/confed/.zshrc")
