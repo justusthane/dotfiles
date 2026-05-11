@@ -24,6 +24,9 @@ local ps_bundle_path = vim.fn.expand("~") .. "/.local/share/nvim/ps_es"
 vim.pack.add({
   "https://github.com/PProvost/vim-ps1",
   "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/junegunn/fzf",
+  "https://github.com/junegunn/fzf.vim",
+  "https://github.com/tpope/vim-fugitive"
 })
 
 -- ============================================================================
