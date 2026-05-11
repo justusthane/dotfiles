@@ -29,6 +29,9 @@ def create_symlink(link, target):
         os.symlink(f"{target}",f"{link}") 
         print("\tDone")
 
-create_symlink(link = f"{nvim_config_dir}/init.vim", 
-               target = f"{home_dir}/dotfiles/init.vim")
+#create_symlink(link = f"{nvim_config_dir}/init.lua", 
+#               target = f"{home_dir}/dotfiles/init.lua")
+#
 
+create_symlink(link = f"{nvim_config_dir}",
+               target = f"{home_dir}/dotfiles/.config/nvim")
